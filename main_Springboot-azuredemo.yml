@@ -6,7 +6,7 @@ name: Build and deploy JAR app to Azure Web App - Springboot-azuredemo
 on:
   push:
     branches:
-      - development
+      - main
   workflow_dispatch:
 
 jobs:
@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'Springboot-azuredemo'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_a8ee2b6ef71f4497ba5f40ce6ccec606 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_38153e7b37b94b58b5463fdf0c35549d }}
           package: '*.jar'
